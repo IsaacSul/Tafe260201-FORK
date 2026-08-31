@@ -17,7 +17,7 @@
 
             <StackPanel Orientation="Vertical">
                 <Button HorizontalAlignment="Center" Margin="4" FontSize="24">Mortgage Calculator</Button>
-                <Button HorizontalAlignment="Center" Margin="4" FontSize="24">Currency Calculator</Button>
+                <Button HorizontalAlignment="Center" Margin="4" FontSize="24" Click="Button_Click">Currency Calculator</Button>
                 <Button HorizontalAlignment="Center" Margin="4" FontSize="24">Math Calculator</Button>
                 <Button HorizontalAlignment="Center" Margin="4" FontSize="24">Exit</Button>
             </StackPanel>
