@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using System.Runtime.InteropServices.WindowsRuntime;
+using System.Threading.Tasks;
 using Windows.Foundation;
 using Windows.Foundation.Collections;
 using Windows.UI.Xaml;
@@ -42,9 +43,15 @@ namespace Calculator
             this.Frame.Navigate(typeof(MainPage));
         }
 
-        private void Button_Click(object sender, RoutedEventArgs e)
+        private async void trip_Click(object sender, RoutedEventArgs e)
         {
-            
+            ContentDialog dialog = new ContentDialog
+            {
+                XamlRoot = this.Content.XamlRoot,
+                Title = "Trip calculator c# will be developed later",
+                CloseButtonText = "Ok",
+            };
+            await dialog.ShowAsync();
         }
     }
 }

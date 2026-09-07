@@ -19,7 +19,8 @@
                 <Button HorizontalAlignment="Center" Margin="4" FontSize="24" Click="mortgage_Click">Mortgage Calculator</Button>
                 <Button HorizontalAlignment="Center" Margin="4" FontSize="24" Click="currency_Click">Currency Calculator</Button>
                 <Button HorizontalAlignment="Center" Margin="4" FontSize="24" Click="math_Click">Math Calculator</Button>
-                <Button HorizontalAlignment="Center" Margin="4" FontSize="24" Click="Button_Click">Exit</Button>
+                <Button HorizontalAlignment="Center" Margin="4" FontSize="24" Click="trip_Click">Trip Calculator</Button>
+                <Button HorizontalAlignment="Center" Margin="4" FontSize="24">Exit</Button>
             </StackPanel>
         </StackPanel>
     </Grid>
