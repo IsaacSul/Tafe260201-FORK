@@ -1,0 +1,53 @@
+﻿<Page
+    x:Class="Calculator.CurrencyConverter"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:Calculator"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+
+    <Grid>
+        <StackPanel Orientation="Vertical">
+            <TextBlock Padding="12" FontWeight="Bold" FontSize="60" HorizontalAlignment="Center">Currency Conversion Calculator</TextBlock>
+            
+            <StackPanel Orientation="Horizontal">
+                <StackPanel Orientation="Vertical">
+                    <TextBlock Padding="12" FontSize="32">Amount $</TextBlock>
+                    <TextBox x:Name="amountTextInput" Margin="12" PlaceholderText="Amount" Width="200"></TextBox>
+                </StackPanel>
+
+                <StackPanel Orientation="Vertical">
+                    <TextBlock Padding="12" FontSize="32">From</TextBlock>
+                    <ComboBox x:Name="fromCurrency" Margin="12" PlaceholderText="Choose a currency" Width="200">
+                        <ComboBoxItem Content="USD - US Dollar"/>
+                        <ComboBoxItem Content="EUR - Euro"/>
+                        <ComboBoxItem Content="UK - Pound"/>
+                        <ComboBoxItem Content="INR - Rupee"/>
+                    </ComboBox>
+                </StackPanel>
+
+                <StackPanel Orientation="Vertical">
+                    <TextBlock Padding="12" FontSize="32">To</TextBlock>
+                    <ComboBox x:Name="toCurrency" Margin="12" PlaceholderText="Choose a currency" Width="200">
+                        <ComboBoxItem Content="USD - US Dollar"/>
+                        <ComboBoxItem Content="EUR - Euro"/>
+                        <ComboBoxItem Content="UK - Pound"/>
+                        <ComboBoxItem Content="INR - Rupee"/>
+                    </ComboBox>
+                </StackPanel>
+            </StackPanel>
+
+            <TextBlock x:Name="amountTextOuput" Padding="12" FontSize="22"></TextBlock>
+            <TextBlock x:Name="equals" Padding="12" FontSize="22" FontWeight="Bold"></TextBlock>
+            <TextBlock x:Name="oneFrom" Padding="12" FontSize="22"></TextBlock>
+            <TextBlock x:Name="oneTo" Padding="12" FontSize="22"></TextBlock>
+            
+            <StackPanel Orientation="Horizontal">
+                <Button x:Name="backButton" Margin="12" Click="backButton_Click">Back</Button>
+                <Button x:Name="convertButton" Click="convertButton_Click">Convert</Button>
+            </StackPanel>
+        </StackPanel>
+    </Grid>
+</Page>
