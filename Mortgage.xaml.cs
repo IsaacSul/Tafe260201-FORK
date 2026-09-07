@@ -30,36 +30,45 @@ namespace Calculator
 
         private void calculateButton_Click(object sender, RoutedEventArgs e)
         {
-            double yearlyIntrestRate = double.Parse(annualInterestTextBox.Text);
+            try
+            {
+                double yearlyIntrestRate = double.Parse(annualInterestTextBox.Text);
 
-            double principleBorrow = double.Parse(principalTextbox.Text);
+                double principleBorrow = double.Parse(principalTextbox.Text);
 
-            int Years = int.Parse(yearsTextBox.Text);
+                int Years = int.Parse(yearsTextBox.Text);
 
-            int andMonths = int.Parse(monthsTextbox.Text);
-
-
-
-            double monthlyIntrestRate = yearlyIntrestRate / 12.0;
-
-            monthlyIntrestRate = monthlyIntrestRate * 0.01;
+                int andMonths = int.Parse(monthsTextbox.Text);
 
 
 
-            int numberOfPayments = Years * 12 + andMonths;
+                double monthlyIntrestRate = yearlyIntrestRate / 12.0;
+
+                monthlyIntrestRate = monthlyIntrestRate * 0.01;
 
 
 
-            double numerator = principleBorrow * Math.Pow(1 + monthlyIntrestRate, numberOfPayments) * monthlyIntrestRate;
-
-            double denominator = Math.Pow(1 + monthlyIntrestRate, numberOfPayments) - 1;
-
-            double monthlyRepayment = numerator / denominator;
+                int numberOfPayments = Years * 12 + andMonths;
 
 
 
-            monthlyInterestTextBox.Text = monthlyIntrestRate.ToString();
-            monthlyRepaymentTextBox.Text = monthlyRepayment.ToString();
+                double numerator = principleBorrow * Math.Pow(1 + monthlyIntrestRate, numberOfPayments) * monthlyIntrestRate;
+
+                double denominator = Math.Pow(1 + monthlyIntrestRate, numberOfPayments) - 1;
+
+                double monthlyRepayment = numerator / denominator;
+
+                monthlyInterestTextBox.Text = monthlyIntrestRate.ToString();
+                monthlyRepaymentTextBox.Text = monthlyRepayment.ToString();
+            }
+            catch 
+            {
+                Console.WriteLine($"An Error Occurred");
+            }
+
+
+
+                
         }
 
         private void exitButton_Click(object sender, RoutedEventArgs e)
