@@ -15,7 +15,7 @@
             <StackPanel Orientation="Horizontal">
                 <StackPanel Orientation="Vertical">
                     <TextBlock Padding="12" FontSize="32">Amount $</TextBlock>
-                    <TextBox x:Name="amountText" Margin="12" PlaceholderText="Amount" Width="200"></TextBox>
+                    <TextBox x:Name="amountTextInput" Margin="12" PlaceholderText="Amount" Width="200"></TextBox>
                 </StackPanel>
 
                 <StackPanel Orientation="Vertical">
@@ -39,14 +39,14 @@
                 </StackPanel>
             </StackPanel>
 
-            <TextBlock x:Name="amountText" Padding="12" FontSize="22"></TextBlock>
+            <TextBlock x:Name="amountTextOuput" Padding="12" FontSize="22"></TextBlock>
             <TextBlock x:Name="equals" Padding="12" FontSize="22" FontWeight="Bold"></TextBlock>
             <TextBlock x:Name="oneFrom" Padding="12" FontSize="22"></TextBlock>
             <TextBlock x:Name="oneTo" Padding="12" FontSize="22"></TextBlock>
             
             <StackPanel Orientation="Horizontal">
-                <Button x:Name="backButton" Margin="12" >Back</Button>
-                <Button x:Name="convertButton">Convert</Button>
+                <Button x:Name="backButton" Margin="12" Click="backButton_Click">Back</Button>
+                <Button x:Name="convertButton" Click="convertButton_Click">Convert</Button>
             </StackPanel>
         </StackPanel>
     </Grid>
